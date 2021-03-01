@@ -8,16 +8,16 @@ const Testimonial = () => {
 		{
 			comment:
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
-			name: "Wilson Harry",
-			city: "New York",
-			img: wilson,
+			name: "Emma Gomez",
+			city: "California",
+			img: emma,
 		},
 		{
 			comment:
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ",
-			name: "Emma Gomez",
-			city: "California",
-			img: emma,
+			name: "Wilson Harry",
+			city: "New York",
+			img: wilson,
 		},
 		{
 			comment:

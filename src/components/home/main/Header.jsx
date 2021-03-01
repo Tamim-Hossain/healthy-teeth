@@ -5,7 +5,7 @@ import Main from "./Main";
 
 const Header = () => {
 	return (
-		<main style={{ height: "800px" }}>
+		<main style={{ height: "700px" }}>
 			<Menu />
 			<Main />
 			<BusinessInfo />

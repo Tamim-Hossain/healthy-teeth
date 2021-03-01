@@ -19,7 +19,7 @@ const MakeAppointment = () => {
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quidem assumenda
 							odit aut optio provident consectetur incidunt tempora illo dolores?
 						</p>
-						<Button variant="info" as={Link} to="/appointment">
+						<Button variant="info" className="font-weight-bold" as={Link} to="/appointment">
 							GET APPOINTMENT
 						</Button>
 					</Col>
