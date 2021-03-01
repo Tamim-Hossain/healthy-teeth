@@ -9,9 +9,9 @@ const Menu = () => {
 	};
 	return (
 		<Navbar expand="lg" style={{ padding: "0" }}>
-			<Container fluid>
+			<Container>
 				<Navbar.Brand as={Link} to="/">
-					<img style={logoStyle} className="ml-4" src={logo} alt="" />
+					<img style={logoStyle} src={logo} alt="" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
