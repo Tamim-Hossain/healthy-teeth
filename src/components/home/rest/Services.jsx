@@ -1,3 +1,4 @@
+import { Col, Row } from "react-bootstrap";
 import cavity from "../../../images/cavity.png";
 import fluoride from "../../../images/fluoride.png";
 import whitening from "../../../images/whitening.png";
@@ -21,17 +22,19 @@ const Services = () => {
 		},
 	];
 	return (
-		<div>
-			<h5>OUR SERVICES</h5>
-			<h2>Services We Provide</h2>
-			{servicesInfo.map((service) => (
-				<>
-					<img src={service.img} alt="" />
-					<h5>{service.name}</h5>
-					<p>{service.description}</p>
-				</>
-			))}
-		</div>
+		<section className="mt-5 pt-5 w-75 text-center mb-5" style={{ margin: "0 auto" }}>
+			<h5 className="font-weight-bold">OUR SERVICES</h5>
+			<h2 className="font-weight-bold mb-5">Services We Provide</h2>
+			<Row className="d-flex">
+				{servicesInfo.map((service) => (
+					<Col md={4} className="">
+						<img style={{ height: "80px" }} className="mb-4" src={service.img} alt="" />
+						<h4>{service.name}</h4>
+						<p className="text-secondary mt-4">{service.description}</p>
+					</Col>
+				))}
+			</Row>
+		</section>
 	);
 };
 

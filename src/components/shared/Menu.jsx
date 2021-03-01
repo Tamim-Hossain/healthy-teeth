@@ -1,12 +1,17 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logo from "../../images/logo.png";
 
 const Menu = () => {
+	const logoStyle = {
+		height: " 80px",
+		width: "90px",
+	};
 	return (
-		<Navbar expand="lg">
+		<Navbar expand="lg" style={{ padding: "0" }}>
 			<Container fluid>
 				<Navbar.Brand as={Link} to="/">
-					logo
+					<img style={logoStyle} className="ml-4" src={logo} alt="" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">

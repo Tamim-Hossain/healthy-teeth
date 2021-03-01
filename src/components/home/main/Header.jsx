@@ -1,11 +1,11 @@
 import Menu from "../../shared/Menu";
 import BusinessInfo from "../main/BusinessInfo";
-import Main from "./Main";
 import "./Header.css";
+import Main from "./Main";
 
 const Header = () => {
 	return (
-		<main style={{ height: "600px" }}>
+		<main style={{ height: "800px" }}>
 			<Menu />
 			<Main />
 			<BusinessInfo />

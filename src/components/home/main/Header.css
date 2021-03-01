@@ -9,7 +9,7 @@ main::after {
 	content: "";
 	position: absolute;
 	top: 0;
-	width: 30%;
+	width: 33%;
 	right: 0;
 	background-color: #3a4256;
 	z-index: -1;

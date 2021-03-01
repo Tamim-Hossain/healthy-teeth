@@ -1,4 +1,4 @@
-import { faClock, faMapMarker, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faMapMarkerAlt, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Row } from "react-bootstrap";
 import "./BusinessInfo.css";
@@ -12,7 +12,7 @@ const BusinessInfo = () => {
 			backgroundColor: "primary",
 		},
 		{
-			icon: faMapMarker,
+			icon: faMapMarkerAlt,
 			title: "Visit Our Location",
 			description: "Brooklyn, NY 10003 USA",
 			backgroundColor: "dark",
@@ -25,11 +25,14 @@ const BusinessInfo = () => {
 		},
 	];
 	return (
-		<Row>
+		<Row className="mt-5 pt-5 text-white w-75" style={{ margin: "0 auto" }}>
 			{infoData.map((info) => (
-				<Col md={4} className={`d-flex ${info.backgroundColor}`}>
-					<div>
-						<FontAwesomeIcon icon={info.icon} />
+				<Col
+					md={4}
+					className={`d-flex align-items-center justify-content-center p-4 border-left ${info.backgroundColor}`}
+				>
+					<div className="mr-4">
+						<FontAwesomeIcon icon={info.icon} style={{ fontSize: "3rem" }} />
 					</div>
 					<div>
 						<p>{info.title}</p>
