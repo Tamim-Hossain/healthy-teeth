@@ -33,22 +33,22 @@ const Testimonial = () => {
 			<h2 className="font-weight-bold mb-5">
 				What's Our Patients <br /> Says
 			</h2>
-			{testimonialsData.map((testimonial) => (
-				<Row>
-					<Col md={4} className='shadow'>
+			<Row>
+				{testimonialsData.map((testimonial) => (
+					<Col md={4} className="shadow-sm rounded bg-white mb-5 p-4 border-left">
 						<p>{testimonial.comment}</p>
 						<div className="d-flex">
 							<div>
 								<img src={testimonial.img} alt="" className="img-fluid" />
 							</div>
-							<div>
+							<div className="ml-4 mt-3">
 								<h6 className="text-info font-weight-bold">{testimonial.name}</h6>
 								<p className="text-secondary">{testimonial.city}</p>
 							</div>
 						</div>
 					</Col>
-				</Row>
-			))}
+				))}
+			</Row>
 		</Container>
 	);
 };

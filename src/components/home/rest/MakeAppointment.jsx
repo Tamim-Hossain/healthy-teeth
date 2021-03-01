@@ -4,7 +4,7 @@ import appointmentImg from "../../../images/makeAppointment.png";
 
 const MakeAppointment = () => {
 	return (
-		<section style={{ background: "#3a4256" }} className="mb-5">
+		<section style={{ background: "#3a4256" }} className="mb-5 mt-5">
 			<Container>
 				<Row>
 					<Col md={5}>
