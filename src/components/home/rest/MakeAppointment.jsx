@@ -1,4 +1,5 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import appointmentImg from "../../../images/makeAppointment.png";
 
 const MakeAppointment = () => {
@@ -18,7 +19,9 @@ const MakeAppointment = () => {
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quidem assumenda
 							odit aut optio provident consectetur incidunt tempora illo dolores?
 						</p>
-						<Button variant="info">GET APPOINTMENT</Button>
+						<Button variant="info" as={Link} to="/appointment">
+							GET APPOINTMENT
+						</Button>
 					</Col>
 				</Row>
 			</Container>

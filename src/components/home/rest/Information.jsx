@@ -1,4 +1,5 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import homeInfoImg from "../../../images/homeInfo.png";
 
 const Information = () => {
@@ -20,7 +21,7 @@ const Information = () => {
 						fugiat suscipit rerum aliquam error dolores nam blanditiis labore, dicta maiores ea
 						ipsum, corrupti est non earum. Iure, delectus!
 					</p>
-					<Button variant="info" className="font-weight-bold mt-5">
+					<Button variant="info" className="font-weight-bold mt-5" as={Link} to="/appointment">
 						GET APPOINTMENT
 					</Button>
 				</Col>

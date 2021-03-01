@@ -1,4 +1,5 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import homeChair from "../../../images/homeChair.png";
 
 const Main = () => {
@@ -13,7 +14,7 @@ const Main = () => {
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
 						has been the industry’s standard dummy text ever since the
 					</p>
-					<Button variant="info" className="font-weight-bold">
+					<Button variant="info" className="font-weight-bold" as={Link} to="/appointment">
 						GET APPOINTMENT
 					</Button>
 				</Col>
