@@ -1,13 +1,14 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import footerImg from "../../images/footer.png";
 
 const Footer = () => {
 	return (
-		<footer className="bg-light">
+		<footer style={{ backgroundImage: `url(${footerImg})`, backgroundSize: "cover" }}>
 			<Container className="pt-5">
 				<Row>
 					<Col md={4}>
-						<h5>Services</h5>
+						<h5 className="text-info font-weight-bold mb-3">Services</h5>
 						<Link className="text-secondary">Emergency Dental Care</Link>
 						<br />
 						<Link className="text-secondary">Check Up</Link>
@@ -17,7 +18,7 @@ const Footer = () => {
 						<Link className="text-secondary">Tooth Extraction</Link>
 					</Col>
 					<Col md={4}>
-						<h5>Oral Health</h5>
+						<h5 className="text-info font-weight-bold mb-3">Oral Health</h5>
 						<Link className="text-secondary">Treatment of personal Diseases</Link>
 						<br />
 						<Link className="text-secondary">Emergency Dental Care</Link>
@@ -27,7 +28,7 @@ const Footer = () => {
 						<Link className="text-secondary">Check UP</Link>
 					</Col>
 					<Col md={4}>
-						<h5>Contact Us</h5>
+						<h5 className="text-info font-weight-bold mb-3">Contact Us</h5>
 						<p className="text-secondary">Brooklyn, NY 10003 USA</p>
 						<p className="text-secondary">Phone: +000 123 456789</p>
 					</Col>

@@ -4,12 +4,12 @@ import logo from "../../images/logo.png";
 
 const Menu = () => {
 	const logoStyle = {
-		height: " 80px",
-		width: "90px",
+		height: "90px",
+		width: "100px",
 	};
 	return (
-		<Navbar expand="lg" style={{ padding: "0" }}>
-			<Container>
+		<Container>
+			<Navbar expand="lg" style={{ padding: "0" }}>
 				<Navbar.Brand as={Link} to="/">
 					<img style={logoStyle} src={logo} alt="" />
 				</Navbar.Brand>
@@ -22,8 +22,8 @@ const Menu = () => {
 						<Nav.Link href="#link">Link</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
-			</Container>
-		</Navbar>
+			</Navbar>
+		</Container>
 	);
 };
 
