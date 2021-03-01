@@ -6,21 +6,21 @@ import "./BusinessInfo.css";
 const BusinessInfo = () => {
 	const infoData = [
 		{
+			icon: faClock,
 			title: "Opening Hours",
 			description: "We are open 7 days",
-			icon: faClock,
 			backgroundColor: "primary",
 		},
 		{
+			icon: faMapMarker,
 			title: "Visit Our Location",
 			description: "Brooklyn, NY 10003 USA",
-			icon: faMapMarker,
 			backgroundColor: "dark",
 		},
 		{
+			icon: faPhone,
 			title: "Call Us Now",
 			description: "+000 123 456789",
-			icon: faPhone,
 			backgroundColor: "primary",
 		},
 	];

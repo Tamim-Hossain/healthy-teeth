@@ -1,6 +1,6 @@
 import Footer from "../shared/Footer";
-import Header from "./Header";
-import Services from "./Services";
+import Header from "./main/Header";
+import Services from "./rest/Services";
 
 const Home = () => {
 	return (

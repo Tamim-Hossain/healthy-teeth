@@ -1,5 +1,5 @@
 import { Button, Col, Row } from "react-bootstrap";
-import homeChair from "../../images/homeChair.png";
+import homeChair from "../../../images/homeChair.png";
 
 const Main = () => {
 	return (
