@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import Modal from "react-modal";
 
 const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
-	const appointmentData = { title, date, time };
 	const modalStyles = {
 		content: {
 			top: "50%",
@@ -17,8 +16,8 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 
 	const { register, handleSubmit, errors } = useForm();
 	const onSubmit = (data) => {
-		const newData = { ...data, ...appointmentData };
-		if (newData) {
+		const appointmentData = { ...data, title, date, time };
+		if (appointmentData) {
 			closeModal();
 		}
 	};
@@ -36,7 +35,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 					name="name"
 					className={errors.name && "border-danger"}
 				/>{" "}
-				{errors.time && <span className="text-danger">This field is required.</span>}
+				{errors.name && <span className="text-danger">Name is required.</span>}
 				<br />
 				<Form.Control
 					type="tel"
@@ -45,7 +44,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 					name="phone"
 					className={errors.phone && "border-danger"}
 				/>{" "}
-				{errors.time && <span className="text-danger">This field is required.</span>}
+				{errors.phone && <span className="text-danger">Phone is required.</span>}
 				<br />
 				<Form.Control
 					type="email"
@@ -54,7 +53,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 					name="email"
 					className={errors.email && "border-danger"}
 				/>{" "}
-				{errors.time && <span className="text-danger">This field is required.</span>}
+				{errors.email && <span className="text-danger">Email is required.</span>}
 				<br />
 				<Button variant="info" type="submit" className="float-right font-weight-bold">
 					SEND
