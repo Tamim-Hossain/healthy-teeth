@@ -12,11 +12,19 @@ const Dashboard = () => {
 		<Container>
 			<Row>
 				<Menu />
-				<Col md={3}>
-					<NavLink activeClassName="bg-light" className="dropdown-item" to="/dashboard/today">
+				<Col md={3} className="mt-5">
+					<NavLink
+						activeClassName="bg-light font-weight-bold"
+						className="dropdown-item"
+						to="/dashboard/today"
+					>
 						Todays Appointments
 					</NavLink>
-					<NavLink activeClassName="bg-light" className="dropdown-item" to="/dashboard/all">
+					<NavLink
+						activeClassName="bg-light font-weight-bold"
+						className="dropdown-item"
+						to="/dashboard/all"
+					>
 						All Appointments
 					</NavLink>
 				</Col>
