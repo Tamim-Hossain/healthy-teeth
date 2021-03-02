@@ -9,37 +9,37 @@ const Footer = () => {
 				<Row>
 					<Col md={4}>
 						<h5 className="text-info font-weight-bold mb-3">Services</h5>
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Emergency Dental Care
 						</Link>
 						<br />
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Check Up
 						</Link>
 						<br />
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Treatment of personal Diseases
 						</Link>
 						<br />
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Tooth Extraction
 						</Link>
 					</Col>
 					<Col md={4}>
 						<h5 className="text-info font-weight-bold mb-3">Oral Health</h5>
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Treatment of personal Diseases
 						</Link>
 						<br />
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Emergency Dental Care
 						</Link>
 						<br />
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Tooth Extraction
 						</Link>
 						<br />
-						<Link className="text-secondary" to="">
+						<Link className="text-secondary" to="#">
 							Check UP
 						</Link>
 					</Col>

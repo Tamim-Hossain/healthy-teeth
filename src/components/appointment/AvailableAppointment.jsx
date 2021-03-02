@@ -1,6 +1,18 @@
+import { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import AppointmentModal from "./AppointmentModal";
 
 const AvailableAppointment = ({ date }) => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const openModal = () => {
+		setIsModalOpen(true);
+	};
+
+	const closeModal = () => {
+		setIsModalOpen(false);
+	};
+
 	const appointmentsData = [
 		{
 			id: 1,
@@ -45,7 +57,7 @@ const AvailableAppointment = ({ date }) => {
 			<hr className="w-50" />
 			<Row>
 				{appointmentsData.map((appointment) => (
-					<Col md={4} className="mb-5 mt-5">
+					<Col md={4} className="mt-5">
 						<Card className="p-3 border-0 shadow">
 							<Card.Body className="text-center">
 								<Card.Title className="font-weight-bold text-info">{appointment.name}</Card.Title>
@@ -53,7 +65,7 @@ const AvailableAppointment = ({ date }) => {
 								<Card.Subtitle className="text-secondary">
 									<small>{appointment.seat} SEATS AVAILABLE</small>
 								</Card.Subtitle>
-								<Button className="font-weight-bold mt-3" variant="info">
+								<Button className="font-weight-bold mt-3" variant="info" onClick={openModal}>
 									BOOK APPOINTMENT
 								</Button>
 							</Card.Body>
@@ -61,6 +73,11 @@ const AvailableAppointment = ({ date }) => {
 					</Col>
 				))}
 			</Row>
+			<AppointmentModal
+				isModalOpen={isModalOpen}
+				closeModal={closeModal}
+				// title={appointment.name}
+			/>
 		</Container>
 	);
 };
