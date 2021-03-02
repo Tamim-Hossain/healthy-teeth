@@ -1,8 +1,11 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 const Menu = () => {
+	const location = useLocation();
+	const { pathname } = location;
+
 	const logoStyle = {
 		height: "90px",
 		width: "100px",
@@ -16,10 +19,27 @@ const Menu = () => {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
-						<Nav.Link as={Link} to="/">
+						<Nav.Link
+							as={Link}
+							to="/"
+							className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+						>
 							Home
 						</Nav.Link>
-						<Nav.Link href="#link">Link</Nav.Link>
+						<Nav.Link
+							as={Link}
+							to="/appointment"
+							className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+						>
+							Appointment
+						</Nav.Link>
+						<Nav.Link
+							as={Link}
+							to="/dashboard"
+							className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+						>
+							Dashboard
+						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
