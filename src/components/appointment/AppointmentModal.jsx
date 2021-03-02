@@ -18,6 +18,17 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 	const onSubmit = (data) => {
 		const appointmentData = { ...data, title, date, time };
 		if (appointmentData) {
+			fetch("http://localhost:4000/appointments", {
+				method: "POST",
+				headers: {
+					"Content-type": "application/json",
+				},
+				body: JSON.stringify(appointmentData),
+			})
+				.then((res) => res.json())
+				.then((result) => {
+					alert("done");
+				});
 			closeModal();
 		}
 	};
