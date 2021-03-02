@@ -41,7 +41,7 @@ const TodayAppointment = () => {
 				</Col>
 				<Col md={3}>
 					{" "}
-					<h5 className="text-center text-secondary font-weight-bold">DATE</h5>
+					<h5 className="text-center text-secondary font-weight-bold">TIME</h5>
 					<hr />
 				</Col>
 				{filterToday.map((patient, idx) => (
@@ -60,7 +60,7 @@ const TodayAppointment = () => {
 							<p>{patient.phone}</p>
 						</Col>
 						<Col className="text-center font-weight-bold" md={3}>
-							<p>{patient.date}</p>
+							<p>{patient.time}</p>
 						</Col>
 					</>
 				))}
