@@ -24,10 +24,11 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 	return (
 		<Modal isOpen={isModalOpen} onRequestClose={closeModal} style={modalStyles}>
 			<Form onSubmit={handleSubmit(onSubmit)} className="p-5">
-				<h3 className="font-weight-bold text-info text-uppercase">{title}</h3>
-				<p>
+				<h2 className="font-weight-bold text-info text-uppercase">{title}</h2>
+				<p className="text-center text-secondary">
 					Time: {time}, {date}
 				</p>
+				<br />
 				<Form.Control
 					type="text"
 					placeholder="Enter Your Name"
@@ -56,7 +57,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 				{errors.email && <span className="text-danger">Email is required.</span>}
 				<br />
 				<Button variant="info" type="submit" className="float-right font-weight-bold">
-					SEND
+					CONFIRM
 				</Button>
 			</Form>
 		</Modal>
