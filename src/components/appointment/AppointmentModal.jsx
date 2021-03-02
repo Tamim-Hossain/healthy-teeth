@@ -1,6 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Modal from "react-modal";
+import swal from "sweetalert";
 
 const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 	const modalStyles = {
@@ -27,7 +28,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 			})
 				.then((res) => res.json())
 				.then((result) => {
-					alert("done");
+					swal("Your Appointment Enlisted Successfully", "", "success");
 				});
 			closeModal();
 		}
