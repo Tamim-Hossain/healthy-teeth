@@ -41,7 +41,8 @@ const AllAppointment = () => {
 				{patients.map((patient, idx) => (
 					<>
 						<Col className="text-center font-weight-bold" md={1}>
-							<p>{idx + 1}</p>
+							<p>{idx + 1}.</p>
+							<hr style={{ width: "800px" }} />
 						</Col>
 						<Col className="text-center font-weight-bold" md={3}>
 							<p>{patient.name}</p>
