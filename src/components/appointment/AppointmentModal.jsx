@@ -2,7 +2,8 @@ import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Modal from "react-modal";
 
-const AppointmentModal = ({ closeModal, isModalOpen }) => {
+const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
+	const appointmentData = { title, date, time };
 	const modalStyles = {
 		content: {
 			top: "50%",
@@ -14,43 +15,48 @@ const AppointmentModal = ({ closeModal, isModalOpen }) => {
 		},
 	};
 
-	const { register, handleSubmit, watch, errors } = useForm();
+	const { register, handleSubmit, errors } = useForm();
 	const onSubmit = (data) => {
-		console.log(data);
+		const newData = { ...data, ...appointmentData };
+		if (newData) {
+			closeModal();
+		}
 	};
 	return (
 		<Modal isOpen={isModalOpen} onRequestClose={closeModal} style={modalStyles}>
-			<Form onSubmit={handleSubmit(onSubmit)}>
-				<h2></h2>
-				<Form.Control as="select" name="time" ref={register({ required: true })}>
-					<option value="" hidden selected>
-						Select Time
-					</option>
-					<option value="1">2</option>
-					<option value="2">3</option>
-					<option value="3">4</option>
-					<option value="4">5</option>
-				</Form.Control>
+			<Form onSubmit={handleSubmit(onSubmit)} className="p-5">
+				<h3 className="font-weight-bold text-info text-uppercase">{title}</h3>
+				<p>
+					Time: {time}, {date}
+				</p>
 				<Form.Control
 					type="text"
 					placeholder="Enter Your Name"
 					ref={register({ required: true })}
 					name="name"
-				/>
+					className={errors.name && "border-danger"}
+				/>{" "}
+				{errors.time && <span className="text-danger">This field is required.</span>}
+				<br />
 				<Form.Control
 					type="tel"
 					placeholder="Enter Your Phone Number"
 					ref={register({ required: true })}
 					name="phone"
-				/>
+					className={errors.phone && "border-danger"}
+				/>{" "}
+				{errors.time && <span className="text-danger">This field is required.</span>}
+				<br />
 				<Form.Control
 					type="email"
 					placeholder="Enter Your Email Address"
 					ref={register({ required: true })}
 					name="email"
-				/>
-				<Form.Control type="date" ref={register({ required: true })} name="date" />
-				<Button variant="info" type="submit">
+					className={errors.email && "border-danger"}
+				/>{" "}
+				{errors.time && <span className="text-danger">This field is required.</span>}
+				<br />
+				<Button variant="info" type="submit" className="float-right font-weight-bold">
 					SEND
 				</Button>
 			</Form>
@@ -58,4 +64,5 @@ const AppointmentModal = ({ closeModal, isModalOpen }) => {
 	);
 };
 
+Modal.setAppElement("#root");
 export default AppointmentModal;

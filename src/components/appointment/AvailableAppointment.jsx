@@ -4,6 +4,8 @@ import AppointmentModal from "./AppointmentModal";
 
 const AvailableAppointment = ({ date }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [title, setTitle] = useState("");
+	const [time, setTime] = useState("");
 
 	const openModal = () => {
 		setIsModalOpen(true);
@@ -65,7 +67,15 @@ const AvailableAppointment = ({ date }) => {
 								<Card.Subtitle className="text-secondary">
 									<small>{appointment.seat} SEATS AVAILABLE</small>
 								</Card.Subtitle>
-								<Button className="font-weight-bold mt-3" variant="info" onClick={openModal}>
+								<Button
+									className="font-weight-bold mt-3"
+									variant="info"
+									onClick={() => {
+										openModal();
+										setTitle(appointment.name);
+										setTime(appointment.visitingTime);
+									}}
+								>
 									BOOK APPOINTMENT
 								</Button>
 							</Card.Body>
@@ -76,7 +86,9 @@ const AvailableAppointment = ({ date }) => {
 			<AppointmentModal
 				isModalOpen={isModalOpen}
 				closeModal={closeModal}
-				// title={appointment.name}
+				title={title}
+				date={date}
+				time={time}
 			/>
 		</Container>
 	);
