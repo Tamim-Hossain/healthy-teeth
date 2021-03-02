@@ -29,9 +29,8 @@ const Dashboard = () => {
 					</NavLink>
 				</Col>
 				<Col md={9}>
-					{pathname === "/dashboard" && <TodayAppointment />}
-					{pathname === "/dashboard/today" && <TodayAppointment />}
 					{pathname === "/dashboard/all" && <AllAppointment />}
+					{pathname === "/dashboard/today" && <TodayAppointment />}
 				</Col>
 			</Row>
 		</Container>

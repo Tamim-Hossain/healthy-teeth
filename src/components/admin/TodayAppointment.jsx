@@ -17,7 +17,7 @@ const TodayAppointment = () => {
 
 	return (
 		<>
-			<h2 className="font-weight-bold text-info mb-3">All Patients</h2>
+			<h2 className="font-weight-bold text-info mb-3">Today's Patients</h2>
 			<Row className="pb-5 pt-5 bg-light rounded">
 				<Col md={1}>
 					{" "}

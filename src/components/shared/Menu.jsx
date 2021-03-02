@@ -35,7 +35,7 @@ const Menu = () => {
 						</Nav.Link>
 						<Nav.Link
 							as={Link}
-							to="/dashboard/today"
+							to="/dashboard/all"
 							className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
 						>
 							Dashboard
