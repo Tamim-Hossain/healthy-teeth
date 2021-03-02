@@ -18,7 +18,7 @@ const Dashboard = () => {
 						className="dropdown-item"
 						to="/dashboard/today"
 					>
-						Todays Appointments
+						Today's Appointments
 					</NavLink>
 					<NavLink
 						activeClassName="bg-light font-weight-bold"

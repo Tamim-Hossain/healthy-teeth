@@ -15,7 +15,7 @@ const AllAppointment = () => {
 			<Row className="pb-5 pt-5 bg-light rounded">
 				<Col md={1}>
 					{" "}
-					<h5 className="text-center text-secondary font-weight-bold">Index</h5>
+					<h5 className="text-center text-secondary font-weight-bold">INDEX</h5>
 					<hr />
 				</Col>
 				<Col md={3}>
