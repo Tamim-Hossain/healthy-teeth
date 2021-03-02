@@ -19,7 +19,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 	const onSubmit = (data) => {
 		const appointmentData = { ...data, title, date, time };
 		if (appointmentData) {
-			fetch("http://localhost:4000/appointments", {
+			fetch("http://localhost:4000/addAppointment", {
 				method: "POST",
 				headers: {
 					"Content-type": "application/json",
@@ -28,7 +28,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 			})
 				.then((res) => res.json())
 				.then((result) => {
-					swal("Your Appointment Enlisted Successfully", "", "success");
+					swal("Your Appointment Enlisted Successfully.", "", "success");
 				});
 			closeModal();
 		}
