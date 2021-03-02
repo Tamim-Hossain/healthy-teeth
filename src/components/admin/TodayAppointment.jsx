@@ -9,7 +9,7 @@ const TodayAppointment = () => {
 		fetch("http://localhost:4000/appointments")
 			.then((res) => res.json())
 			.then((data) => setPatients(data));
-	}, []);
+	}, [patients]);
 
 	const filterToday = patients.filter(
 		(filterData) => filterData.date === new Date().toLocaleDateString("en-US", options)
