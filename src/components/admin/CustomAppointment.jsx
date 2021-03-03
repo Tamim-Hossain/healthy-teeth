@@ -25,7 +25,7 @@ const CustomAppointment = () => {
 			</Col>
 			<Col md={7}>
 				<h2 className="font-weight-bold text-info mb-3">
-					Appointment on {date.toLocaleDateString("en-US", options)}
+					Appointments on {date.toLocaleDateString("en-US", options)}
 				</h2>
 				<Row className="pb-5 pt-5 bg-light rounded">
 					<Col md={4}>

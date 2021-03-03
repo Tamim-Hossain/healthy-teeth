@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import AppointmentModal from "./AppointmentModal";
 
@@ -6,6 +6,7 @@ const AvailableAppointment = ({ date }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [title, setTitle] = useState("");
 	const [time, setTime] = useState("");
+	const [appointments, setAppointments] = useState([]);
 
 	const openModal = () => {
 		setIsModalOpen(true);
@@ -15,50 +16,17 @@ const AvailableAppointment = ({ date }) => {
 		setIsModalOpen(false);
 	};
 
-	const appointmentsData = [
-		{
-			id: 1,
-			name: "Teeth Orthodontics",
-			visitingTime: "8:00 AM - 9:00 AM",
-			seat: 10,
-		},
-		{
-			id: 2,
-			name: "Cosmetic Dentistry",
-			visitingTime: "10:50 AM - 11:30 AM",
-			seat: 10,
-		},
-		{
-			id: 3,
-			name: "Teeth Cleaning",
-			visitingTime: "5:00 PM - 6:00 PM",
-			seat: 10,
-		},
-		{
-			id: 4,
-			name: "Cavity Protection",
-			visitingTime: "7:00 AM - 8:30 AM",
-			seat: 15,
-		},
-		{
-			id: 5,
-			name: "Teeth Orthodontics",
-			visitingTime: "8:00 AM - 9:00 AM",
-			seat: 10,
-		},
-		{
-			id: 6,
-			name: "Teeth Orthodontics",
-			visitingTime: "8:00 AM - 9:00 AM",
-			seat: 10,
-		},
-	];
+	useEffect(() => {
+		fetch("http://localhost:4000/availableappointments")
+			.then((res) => res.json())
+			.then((data) => setAppointments(data));
+	}, [appointments]);
 	return (
 		<Container className="mt-5 pt-5 mb-5">
 			<h2 className="font-weight-bold text-info text-center">AvailAble Appointments on {date}</h2>
 			<hr className="w-50" />
 			<Row>
-				{appointmentsData.map((appointment) => (
+				{appointments.map((appointment) => (
 					<Col md={4} className="mt-5">
 						<Card className="p-3 border-0 shadow">
 							<Card.Body className="text-center">
