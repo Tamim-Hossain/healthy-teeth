@@ -1,14 +1,34 @@
+import firebase from "firebase/app";
+import "firebase/auth";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import swal from "sweetalert";
+import firebaseConfig from "./firebaseConfig";
+
+if (!firebase.app.length) {
+	firebase.app();
+} else {
+	firebase.initializeApp(firebaseConfig);
+}
 
 const SignUp = () => {
-	const { register, handleSubmit, errors } = useForm(); // initialize the hook
+	const { register, handleSubmit, errors } = useForm();
 
-	const onSubmit = (data) => {
-		console.log(data);
+	const handleSignUp = (data) => {
+		const { email, password } = data;
+		firebase
+			.auth()
+			.createUserWithEmailAndPassword(email, password)
+			.then((userCredential) => {
+				swal("Account created successfully.", "", "success");
+			})
+			.catch((error) => {
+				var errorCode = error.code;
+				var errorMessage = error.message;
+			});
 	};
 	return (
-		<Form onSubmit={handleSubmit(onSubmit)}>
+		<Form onSubmit={handleSubmit(handleSignUp)}>
 			<Form.Group controlId="email">
 				<Form.Label>Email</Form.Label>
 				<Form.Control

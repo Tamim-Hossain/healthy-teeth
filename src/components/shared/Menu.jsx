@@ -1,14 +1,33 @@
+import firebase from "firebase/app";
+import { useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import { UserContext } from "../../App";
 import logo from "../../images/logo.png";
 
 const Menu = () => {
+	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+	const { isLoggedIn } = loggedInUser;
 	const location = useLocation();
 	const { pathname } = location;
 
 	const logoStyle = {
 		height: "90px",
 		width: "100px",
+	};
+
+	const handleLogOut = () => {
+		firebase
+			.auth()
+			.signOut()
+			.then(() => {
+				setLoggedInUser({
+					isLoggedIn: false,
+				});
+			})
+			.catch((error) => {
+				// An error happened.
+			});
 	};
 	return (
 		<Container>
@@ -40,6 +59,14 @@ const Menu = () => {
 						>
 							Dashboard
 						</Nav.Link>
+						{isLoggedIn && (
+							<Nav.Link
+								onClick={handleLogOut}
+								className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+							>
+								Log Out
+							</Nav.Link>
+						)}
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>

@@ -1,18 +1,39 @@
+import firebase from "firebase/app";
+import "firebase/auth";
+import { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useHistory, useLocation } from "react-router-dom";
+import { UserContext } from "../../App";
 import Menu from "../shared/Menu";
 
 const LogIn = () => {
-	const { register, handleSubmit, errors } = useForm(); // initialize the hook
+	const { register, handleSubmit, errors } = useForm();
+	const [, setLoggedInUser] = useContext(UserContext);
+	let history = useHistory();
+	let location = useLocation();
+	let { from } = location.state || { from: { pathname: "/" } };
 
-	const onSubmit = (data) => {
-		console.log(data);
+	const handleLogIn = (data) => {
+		const { email, password } = data;
+		firebase
+			.auth()
+			.signInWithEmailAndPassword(email, password)
+			.then((userCredential) => {
+				setLoggedInUser({
+					isLoggedIn: true,
+				});
+				history.replace(from);
+			})
+			.catch((error) => {
+				var errorCode = error.code;
+				var errorMessage = error.message;
+			});
 	};
 	return (
 		<Container>
 			<Menu />
-
-			<Form onSubmit={handleSubmit(onSubmit)}>
+			<Form onSubmit={handleSubmit(handleLogIn)}>
 				<Form.Group controlId="email">
 					<Form.Label>Email</Form.Label>
 					<Form.Control
@@ -36,7 +57,7 @@ const LogIn = () => {
 				</Form.Group>
 
 				<Button variant="info" className="font-weight-bold" type="submit">
-					Create New Account
+					Log In
 				</Button>
 			</Form>
 		</Container>
