@@ -9,7 +9,7 @@ const SignUp = () => {
 	};
 	return (
 		<Form onSubmit={handleSubmit(onSubmit)}>
-			<Form.Group>
+			<Form.Group controlId="email">
 				<Form.Label>Email</Form.Label>
 				<Form.Control
 					placeholder="Enter Email Address"
@@ -17,9 +17,10 @@ const SignUp = () => {
 					name="email"
 					ref={register({ required: true })}
 				/>
+				{errors.email && <span className="text-danger">Email is required.</span>}
 			</Form.Group>
 
-			<Form.Group>
+			<Form.Group controlId="password">
 				<Form.Label>Password</Form.Label>
 				<Form.Control
 					placeholder="Enter Password"
@@ -27,6 +28,7 @@ const SignUp = () => {
 					name="password"
 					ref={register({ required: true })}
 				/>
+				{errors.name && <span className="text-danger">Password is required.</span>}
 			</Form.Group>
 
 			<Button variant="info" className="font-weight-bold" type="submit">

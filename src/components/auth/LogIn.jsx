@@ -13,7 +13,7 @@ const LogIn = () => {
 			<Menu />
 
 			<Form onSubmit={handleSubmit(onSubmit)}>
-				<Form.Group>
+				<Form.Group controlId="email">
 					<Form.Label>Email</Form.Label>
 					<Form.Control
 						placeholder="Enter Email Address"
@@ -21,9 +21,10 @@ const LogIn = () => {
 						name="email"
 						ref={register({ required: true })}
 					/>
+					{errors.email && <span className="text-danger">Email is required.</span>}
 				</Form.Group>
 
-				<Form.Group>
+				<Form.Group controlId="password">
 					<Form.Label>Password</Form.Label>
 					<Form.Control
 						placeholder="Enter Password"
@@ -31,6 +32,7 @@ const LogIn = () => {
 						name="password"
 						ref={register({ required: true })}
 					/>
+					{errors.password && <span className="text-danger">Password is required.</span>}
 				</Form.Group>
 
 				<Button variant="info" className="font-weight-bold" type="submit">
