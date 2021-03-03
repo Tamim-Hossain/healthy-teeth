@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
 import Menu from "../shared/Menu";
+import AddAvailableAppointment from "./AddAvailableAppointment";
 import AllAppointment from "./AllAppointment";
 import CustomAppointment from "./CustomAppointment";
 import TodayAppointment from "./TodayAppointment";
@@ -35,11 +36,19 @@ const Dashboard = () => {
 					>
 						Appointments by Date
 					</NavLink>
+					<NavLink
+						activeClassName="bg-light font-weight-bold"
+						className="dropdown-item"
+						to="/dashboard/add"
+					>
+						Add Available Service
+					</NavLink>
 				</Col>
 				<Col md={9}>
 					{pathname === "/dashboard/all" && <AllAppointment />}
 					{pathname === "/dashboard/today" && <TodayAppointment />}
 					{pathname === "/dashboard/search" && <CustomAppointment />}
+					{pathname === "/dashboard/add" && <AddAvailableAppointment />}
 				</Col>
 			</Row>
 		</Container>
