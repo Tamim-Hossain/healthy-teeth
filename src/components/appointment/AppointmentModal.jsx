@@ -19,7 +19,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 	const onSubmit = (data) => {
 		const appointmentData = { ...data, title, date, time };
 		if (appointmentData) {
-			fetch("http://localhost:4000/addAppointment", {
+			fetch("https://teeth-healthy.herokuapp.com/addAppointment", {
 				method: "POST",
 				headers: {
 					"Content-type": "application/json",

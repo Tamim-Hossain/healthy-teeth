@@ -8,7 +8,7 @@ const CustomAppointment = () => {
 	const [date, setDate] = useState(new Date());
 
 	useEffect(() => {
-		fetch("http://localhost:4000/appointments")
+		fetch("https://teeth-healthy.herokuapp.com/appointments")
 			.then((res) => res.json())
 			.then((data) => setPatients(data));
 	}, [patients]);

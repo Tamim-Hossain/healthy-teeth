@@ -17,7 +17,7 @@ const AvailableAppointment = ({ date }) => {
 	};
 
 	useEffect(() => {
-		fetch("http://localhost:4000/availableappointments")
+		fetch("https://teeth-healthy.herokuapp.com/availableappointments")
 			.then((res) => res.json())
 			.then((data) => setAppointments(data));
 	}, [appointments]);
