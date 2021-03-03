@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import Calendar from "react-calendar";
 
 const CustomAppointment = () => {
 	const [patients, setPatients] = useState([]);
 	const options = { year: "numeric", month: "long", day: "numeric" };
+	const [date, setDate] = useState(new Date());
 
 	useEffect(() => {
 		fetch("http://localhost:4000/appointments")
@@ -12,14 +14,19 @@ const CustomAppointment = () => {
 	}, [patients]);
 
 	const filterToday = patients.filter(
-		(filterData) => filterData.date === new Date().toLocaleDateString("en-US", options)
+		(filterData) => filterData.date === date.toLocaleDateString("en-US", options)
 	);
 
 	return (
 		<Row>
-			<Col md={5}></Col>
+			<Col md={5}>
+				<h2 className="font-weight-bold text-info mb-3 mt-2">Select Date:</h2>
+				<Calendar value={date} onChange={setDate} />
+			</Col>
 			<Col md={7}>
-				<h2 className="font-weight-bold text-info mb-3">Today's Patients</h2>
+				<h2 className="font-weight-bold text-info mb-3">
+					Appointment on {date.toLocaleDateString("en-US", options)}
+				</h2>
 				<Row className="pb-5 pt-5 bg-light rounded">
 					<Col md={4}>
 						{" "}
@@ -38,15 +45,15 @@ const CustomAppointment = () => {
 					</Col>
 					{filterToday.map((patient, idx) => (
 						<>
-							<Col className="text-center font-weight-bold" md={4}>
-								<small>{patient.name}</small>
+							<Col className="text-center" md={4}>
+								<p>{patient.name}</p>
 								<hr style={{ width: "460px" }} />
 							</Col>
-							<Col className="text-center font-weight-bold" md={4}>
-								<small>{patient.title}</small>
+							<Col className="text-center" md={4}>
+								<p>{patient.title}</p>
 							</Col>
-							<Col className="text-center font-weight-bold" md={4}>
-								<small>{patient.phone}</small>
+							<Col className="text-center" md={4}>
+								<p>{patient.phone}</p>
 							</Col>
 						</>
 					))}
