@@ -40,33 +40,36 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 				<p className="text-center text-secondary">
 					Time: {time}, {date}
 				</p>
-				<br />
-				<Form.Control
-					type="text"
-					placeholder="Enter Your Name"
-					ref={register({ required: true })}
-					name="name"
-					className={errors.name && "border-danger"}
-				/>{" "}
-				{errors.name && <span className="text-danger">Name is required.</span>}
-				<br />
-				<Form.Control
-					type="tel"
-					placeholder="Enter Your Phone Number"
-					ref={register({ required: true })}
-					name="phone"
-					className={errors.phone && "border-danger"}
-				/>{" "}
-				{errors.phone && <span className="text-danger">Phone is required.</span>}
-				<br />
-				<Form.Control
-					type="email"
-					placeholder="Enter Your Email Address"
-					ref={register({ required: true })}
-					name="email"
-					className={errors.email && "border-danger"}
-				/>{" "}
-				{errors.email && <span className="text-danger">Email is required.</span>}
+				<Form.Group>
+					<Form.Control
+						type="text"
+						placeholder="Enter Your Name"
+						ref={register({ required: true })}
+						name="name"
+						className={errors.name && "border-danger"}
+					/>{" "}
+					{errors.name && <span className="text-danger">Name is required.</span>}
+				</Form.Group>
+				<Form.Group>
+					<Form.Control
+						type="tel"
+						placeholder="Enter Your Phone Number"
+						ref={register({ required: true })}
+						name="phone"
+						className={errors.phone && "border-danger"}
+					/>{" "}
+					{errors.phone && <span className="text-danger">Phone is required.</span>}
+				</Form.Group>
+				<Form.Group>
+					<Form.Control
+						type="email"
+						placeholder="Enter Your Email Address"
+						ref={register({ required: true })}
+						name="email"
+						className={errors.email && "border-danger"}
+					/>{" "}
+					{errors.email && <span className="text-danger">Email is required.</span>}
+				</Form.Group>
 				<br />
 				<Button variant="info" type="submit" className="float-right font-weight-bold">
 					CONFIRM
