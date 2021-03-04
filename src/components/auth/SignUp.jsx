@@ -22,6 +22,7 @@ const SignUp = () => {
 			.auth()
 			.createUserWithEmailAndPassword(email, password)
 			.then((userCredential) => {
+				setError("");
 				swal("Account created successfully.", "", "success");
 			})
 			.catch((error) => {

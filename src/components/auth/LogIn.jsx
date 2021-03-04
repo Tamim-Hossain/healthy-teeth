@@ -24,6 +24,7 @@ const LogIn = () => {
 				setLoggedInUser({
 					isLoggedIn: true,
 				});
+				setError("");
 				localStorage.setItem("isLoggedIn", true);
 				history.replace(from);
 			})
