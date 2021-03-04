@@ -31,8 +31,8 @@ const AvailableAppointment = ({ date }) => {
 			<h2 className="font-weight-bold text-info text-center">AvailAble Appointments on {date}</h2>
 			<hr className="w-50" />
 			{loading ? (
-				<div className=",-5 d-flex justify-content-center">
-					<Loader type="Puff" color="#1cc7c1" height={150} width={150} />
+				<div className="m-5 d-flex justify-content-center">
+					<Loader type="Oval" color="#1cc7c1" height={120} width={120} />
 				</div>
 			) : (
 				<Row>
