@@ -23,6 +23,7 @@ const LogIn = () => {
 				setLoggedInUser({
 					isLoggedIn: true,
 				});
+				localStorage.setItem("isLoggedIn", true);
 				history.replace(from);
 			})
 			.catch((error) => {
@@ -33,7 +34,13 @@ const LogIn = () => {
 	return (
 		<Container>
 			<Menu />
-			<Form onSubmit={handleSubmit(handleLogIn)}>
+			<Form
+				onSubmit={handleSubmit(handleLogIn)}
+				style={{ margin: "0 auto" }}
+				className="w-50 shadow mt-4 p-5"
+			>
+				<h2 className="font-weight-bold text-info text-center">Admin Log In</h2>
+				<hr className="mb-3" />
 				<Form.Group controlId="email">
 					<Form.Label>Email</Form.Label>
 					<Form.Control

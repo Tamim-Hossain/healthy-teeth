@@ -9,7 +9,9 @@ import Home from "./components/home/Home";
 export const UserContext = createContext();
 
 const App = () => {
-	const [loggedInUser, setLoggedInUser] = useState({ isLoggedIn: false });
+	const [loggedInUser, setLoggedInUser] = useState({
+		isLoggedIn: localStorage.getItem("isLoggedIn") || false,
+	});
 
 	return (
 		<UserContext.Provider value={[loggedInUser, setLoggedInUser]}>

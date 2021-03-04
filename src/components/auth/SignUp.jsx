@@ -28,7 +28,13 @@ const SignUp = () => {
 			});
 	};
 	return (
-		<Form onSubmit={handleSubmit(handleSignUp)}>
+		<Form
+			onSubmit={handleSubmit(handleSignUp)}
+			style={{ margin: "0 auto" }}
+			className="w-75 shadow mt-4 p-5"
+		>
+			<h2 className="font-weight-bold text-info text-center">Create New Admin</h2>
+			<hr className="mb-3" />
 			<Form.Group controlId="email">
 				<Form.Label>Email</Form.Label>
 				<Form.Control
@@ -48,11 +54,11 @@ const SignUp = () => {
 					name="password"
 					ref={register({ required: true })}
 				/>
-				{errors.name && <span className="text-danger">Password is required.</span>}
+				{errors.password && <span className="text-danger">Password is required.</span>}
 			</Form.Group>
 
 			<Button variant="info" className="font-weight-bold" type="submit">
-				Create New Account
+				Create
 			</Button>
 		</Form>
 	);

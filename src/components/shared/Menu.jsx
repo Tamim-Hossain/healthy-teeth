@@ -24,6 +24,7 @@ const Menu = () => {
 				setLoggedInUser({
 					isLoggedIn: false,
 				});
+				localStorage.removeItem("isLoggedIn");
 			})
 			.catch((error) => {
 				// An error happened.
