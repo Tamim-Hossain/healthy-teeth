@@ -16,46 +16,33 @@ const SignUp = () => {
 	const { register, handleSubmit, errors } = useForm();
 	const [error, setError] = useState("");
 
-	const handleSignUp = (data) => {
+	const handleSignUp = (data, e) => {
 		const { email, password } = data;
 		firebase
 			.auth()
 			.createUserWithEmailAndPassword(email, password)
 			.then((userCredential) => {
-				setError("");
 				swal("Account created successfully.", "", "success");
+				setError("");
+				e.target.reset();
 			})
 			.catch((error) => {
 				setError(error.message);
 			});
 	};
 	return (
-		<Form
-			onSubmit={handleSubmit(handleSignUp)}
-			style={{ margin: "0 auto" }}
-			className="w-75 shadow mt-4 p-5"
-		>
+		<Form onSubmit={handleSubmit(handleSignUp)} style={{ margin: "0 auto" }} className="w-75 shadow mt-4 p-5">
 			<h2 className="font-weight-bold text-info text-center">Create New Admin</h2>
 			<hr className="mb-3" />
 			<Form.Group controlId="email">
 				<Form.Label>Email</Form.Label>
-				<Form.Control
-					placeholder="Enter Email Address"
-					type="email"
-					name="email"
-					ref={register({ required: true })}
-				/>
+				<Form.Control placeholder="Enter Email Address" type="email" name="email" ref={register({ required: true })} />
 				{errors.email && <span className="text-danger">Email is required.</span>}
 			</Form.Group>
 
 			<Form.Group controlId="password">
 				<Form.Label>Password</Form.Label>
-				<Form.Control
-					placeholder="Enter Password"
-					type="password"
-					name="password"
-					ref={register({ required: true })}
-				/>
+				<Form.Control placeholder="Enter Password" type="password" name="password" ref={register({ required: true })} />
 				{errors.password && <span className="text-danger">Password is required.</span>}
 			</Form.Group>
 

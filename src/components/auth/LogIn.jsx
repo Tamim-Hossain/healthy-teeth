@@ -29,18 +29,13 @@ const LogIn = () => {
 				history.replace(from);
 			})
 			.catch((error) => {
-				var errorMessage = error.message;
-				setError(errorMessage);
+				setError(error.message);
 			});
 	};
 	return (
 		<Container>
 			<Menu />
-			<Form
-				onSubmit={handleSubmit(handleLogIn)}
-				style={{ margin: "0 auto" }}
-				className="w-50 shadow mt-4 p-5"
-			>
+			<Form onSubmit={handleSubmit(handleLogIn)} style={{ margin: "0 auto" }} className="w-50 shadow mt-4 p-5">
 				<h2 className="font-weight-bold text-info text-center">Admin Log In</h2>
 				<hr className="mb-3" />
 				<Form.Group controlId="email">
