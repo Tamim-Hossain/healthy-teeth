@@ -38,7 +38,7 @@ const CustomAppointment = () => {
 					</div>
 				) : (
 					<Row className="pb-5 pt-5 bg-light rounded">
-						<Col md={3}>
+						<Col md={4}>
 							{" "}
 							<h6 className="text-center text-secondary font-weight-bold">NAME</h6>
 							<hr />
@@ -48,9 +48,9 @@ const CustomAppointment = () => {
 							<h6 className="text-center text-secondary font-weight-bold">TITLE</h6>
 							<hr />
 						</Col>
-						<Col md={5}>
+						<Col md={4}>
 							{" "}
-							<h6 className="text-center text-secondary font-weight-bold">EMAIL</h6>
+							<h6 className="text-center text-secondary font-weight-bold">PHONE</h6>
 							<hr />
 						</Col>
 						{filterToday.length === 0 && (
@@ -60,15 +60,15 @@ const CustomAppointment = () => {
 						)}
 						{filterToday.map((patient, idx) => (
 							<>
-								<Col className="text-center" md={3}>
+								<Col className="text-center" md={4}>
 									<p>{patient.name}</p>
 									<hr style={{ width: "460px" }} />
 								</Col>
 								<Col className="text-center" md={4}>
 									<p>{patient.title}</p>
 								</Col>
-								<Col className="text-center" md={5}>
-									<p>{patient.email}</p>
+								<Col className="text-center" md={4}>
+									<p>{patient.phone}</p>
 								</Col>
 							</>
 						))}
