@@ -1,6 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from "react-router-dom";
@@ -10,6 +10,7 @@ import Menu from "../shared/Menu";
 const LogIn = () => {
 	const { register, handleSubmit, errors } = useForm();
 	const [, setLoggedInUser] = useContext(UserContext);
+	const [error, setError] = useState("");
 	let history = useHistory();
 	let location = useLocation();
 	let { from } = location.state || { from: { pathname: "/" } };
@@ -27,8 +28,8 @@ const LogIn = () => {
 				history.replace(from);
 			})
 			.catch((error) => {
-				var errorCode = error.code;
 				var errorMessage = error.message;
+				setError(errorMessage);
 			});
 	};
 	return (
@@ -62,7 +63,7 @@ const LogIn = () => {
 					/>
 					{errors.password && <span className="text-danger">Password is required.</span>}
 				</Form.Group>
-
+				{error && <p className="text-danger">{error}</p>}
 				<Button variant="info" className="font-weight-bold" type="submit">
 					Log In
 				</Button>

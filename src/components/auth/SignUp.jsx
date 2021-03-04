@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
@@ -13,6 +14,7 @@ if (!firebase.app.length) {
 
 const SignUp = () => {
 	const { register, handleSubmit, errors } = useForm();
+	const [error, setError] = useState("");
 
 	const handleSignUp = (data) => {
 		const { email, password } = data;
@@ -23,8 +25,7 @@ const SignUp = () => {
 				swal("Account created successfully.", "", "success");
 			})
 			.catch((error) => {
-				var errorCode = error.code;
-				var errorMessage = error.message;
+				setError(error.message);
 			});
 	};
 	return (
@@ -57,6 +58,7 @@ const SignUp = () => {
 				{errors.password && <span className="text-danger">Password is required.</span>}
 			</Form.Group>
 
+			{error && <p className="text-danger">{error}</p>}
 			<Button variant="info" className="font-weight-bold" type="submit">
 				Create
 			</Button>
