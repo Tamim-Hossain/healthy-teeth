@@ -45,6 +45,7 @@ const LogIn = () => {
 						type="email"
 						name="email"
 						ref={register({ required: true })}
+						defaultValue="admin@healthy-teeth.web.app"
 					/>
 					{errors.email && <span className="text-danger">Email is required.</span>}
 				</Form.Group>
@@ -56,6 +57,7 @@ const LogIn = () => {
 						type="password"
 						name="password"
 						ref={register({ required: true })}
+						defaultValue="admin000"
 					/>
 					{errors.password && <span className="text-danger">Password is required.</span>}
 				</Form.Group>
