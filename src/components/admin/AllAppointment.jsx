@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import Loader from "react-loader-spinner";
 
 const AllAppointment = () => {
@@ -16,6 +17,9 @@ const AllAppointment = () => {
 	}, [patients]);
 	return (
 		<>
+			<Helmet>
+				<title>All Appointments | Healthy Teeth</title>
+			</Helmet>
 			<h2 className="font-weight-bold text-info mb-3">All Patients</h2>
 			{loading ? (
 				<div className="m-5 d-flex justify-content-center">

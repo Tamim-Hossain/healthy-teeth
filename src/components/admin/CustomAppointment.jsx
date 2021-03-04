@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Calendar from "react-calendar";
+import { Helmet } from "react-helmet";
 import Loader from "react-loader-spinner";
 
 const CustomAppointment = () => {
@@ -22,6 +23,9 @@ const CustomAppointment = () => {
 
 	return (
 		<Row>
+			<Helmet>
+				<title>Search | Healthy Teeth</title>
+			</Helmet>
 			<Col md={5}>
 				<h2 className="font-weight-bold text-info mb-3 mt-2">Select Date:</h2>
 				<Calendar value={date} onChange={setDate} />

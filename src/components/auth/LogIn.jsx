@@ -2,6 +2,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation } from "react-router-dom";
 import { UserContext } from "../../App";
@@ -32,8 +33,12 @@ const LogIn = () => {
 				setError(error.message);
 			});
 	};
+
 	return (
 		<Container>
+			<Helmet>
+				<title>Admin Log In | Healthy Teeth</title>
+			</Helmet>
 			<Menu />
 			<Form onSubmit={handleSubmit(handleLogIn)} style={{ margin: "0 auto" }} className="w-50 shadow mt-4 p-5">
 				<h2 className="font-weight-bold text-info text-center">Admin Log In</h2>

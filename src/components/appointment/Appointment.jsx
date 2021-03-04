@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { Helmet } from "react-helmet";
 import appointmentBG from "../../images/homeBackground.png";
 import homeChair from "../../images/homeChair.png";
 import Footer from "../shared/Footer";
@@ -15,6 +16,9 @@ const Appointment = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Appointment | Healthy Teeth</title>
+			</Helmet>
 			<div style={{ backgroundImage: `url(${appointmentBG})`, backgroundSize: "cover" }}>
 				<Menu />
 				<Container>

@@ -1,4 +1,5 @@
 import { Button, Form } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
 
@@ -24,22 +25,15 @@ const AddAvailableAppointment = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>Add Service | Healthy Teeth</title>
+			</Helmet>
 			<h2 className="text-info font-weight-bold mb-3">Add New Service</h2>
-			<Form
-				className="w-75 font-weight-bold bg-light p-5 rounded"
-				onSubmit={handleSubmit(onSubmit)}
-			>
+			<Form className="w-75 font-weight-bold bg-light p-5 rounded" onSubmit={handleSubmit(onSubmit)}>
 				<Form.Group controlId="email">
 					<Form.Label>Title:</Form.Label>
-					<Form.Control
-						type="text"
-						placeholder="Enter Title"
-						ref={register({ required: true })}
-						name="name"
-					/>{" "}
-					{errors.name && (
-						<span className="text-danger font-weight-normal">This field is required.</span>
-					)}
+					<Form.Control type="text" placeholder="Enter Title" ref={register({ required: true })} name="name" />{" "}
+					{errors.name && <span className="text-danger font-weight-normal">This field is required.</span>}
 				</Form.Group>
 
 				<Form.Group controlId="time">
@@ -53,9 +47,7 @@ const AddAvailableAppointment = () => {
 						<option value="5:00 AM - 6:00 PM">5:00 AM - 6:00 PM</option>
 						<option value="7:00 AM - 8:30 AM">7:00 AM - 8:30 AM</option>
 					</Form.Control>{" "}
-					{errors.visitingTime && (
-						<span className="text-danger font-weight-normal">This field is required.</span>
-					)}
+					{errors.visitingTime && <span className="text-danger font-weight-normal">This field is required.</span>}
 				</Form.Group>
 
 				<Form.Group controlId="seat">
@@ -67,9 +59,7 @@ const AddAvailableAppointment = () => {
 						name="seat"
 						min="1"
 					/>{" "}
-					{errors.seat && (
-						<span className="text-danger font-weight-normal">This field is required.</span>
-					)}
+					{errors.seat && <span className="text-danger font-weight-normal">This field is required.</span>}
 				</Form.Group>
 
 				<Button variant="info" type="submit" className="float-right font-weight-bold">

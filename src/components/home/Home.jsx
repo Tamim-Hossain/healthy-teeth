@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Footer from "../shared/Footer";
 import Header from "./main/Header";
 import Information from "./rest/Information";
@@ -8,6 +9,9 @@ import Testimonial from "./rest/Testimonial";
 const Home = () => {
 	return (
 		<div>
+			<Helmet>
+				<title>Home | Healthy Teeth</title>
+			</Helmet>
 			<Header />
 			<Services />
 			<Information />
