@@ -31,7 +31,7 @@ const SignUp = () => {
 			});
 	};
 	return (
-		<Form onSubmit={handleSubmit(handleSignUp)} style={{ margin: "0 auto" }} className="w-75 shadow mt-4 p-5">
+		<Form onSubmit={handleSubmit(handleSignUp)} style={{ margin: "0 auto" }} className="w-75 bg-light mt-4 p-5">
 			<h2 className="font-weight-bold text-info text-center">Create New Admin</h2>
 			<hr className="mb-3" />
 			<Form.Group controlId="email">
