@@ -16,8 +16,8 @@ const MakeAppointment = () => {
 							Make an Appointment <br /> Today
 						</h2>
 						<p className="text-white mb-5">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quidem assumenda
-							odit aut optio provident consectetur incidunt tempora illo dolores?
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quidem assumenda odit aut optio
+							provident consectetur incidunt tempora illo dolores?
 						</p>
 						<Button variant="info" className="font-weight-bold" as={Link} to="/appointment">
 							GET APPOINTMENT
