@@ -58,6 +58,11 @@ const TodayAppointment = () => {
 						<h5 className="text-center text-secondary font-weight-bold">TIME</h5>
 						<hr />
 					</Col>
+					{filterToday.length === 0 && (
+						<p className="display-4 font-weight-bold" style={{ margin: "auto" }}>
+							No data found.
+						</p>
+					)}
 					{filterToday.map((patient, idx) => (
 						<>
 							<Col className="text-center font-weight-bold" md={1}>

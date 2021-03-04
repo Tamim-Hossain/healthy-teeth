@@ -1,0 +1,97 @@
+[debug] [2021-03-04T14:19:31.176Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:19:31.177Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-03-04T14:19:31.177Z] CLI Version:   9.5.0
+[debug] [2021-03-04T14:19:31.177Z] Platform:      linux
+[debug] [2021-03-04T14:19:31.177Z] Node Version:  v14.16.0
+[debug] [2021-03-04T14:19:31.186Z] Time:          Thu Mar 04 2021 20:19:31 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-03-04T14:19:31.186Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:19:31.187Z] 
+[debug] [2021-03-04T14:19:31.206Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-04T14:19:31.207Z] > authorizing via signed-in user
+[debug] [2021-03-04T14:19:31.208Z] [iam] checking project healthy-teeth for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-04T14:19:31.214Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-04T14:19:31.214Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:19:31.478Z] <<< HTTP RESPONSE 200 {"date":"Thu, 04 Mar 2021 14:19:31 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:19:31.488Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/healthy-teeth:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-04T14:19:32.924Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:19:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1165","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:19:32.928Z] > refreshing access token with scopes: []
+[debug] [2021-03-04T14:19:32.929Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:19:33.142Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 04 Mar 2021 14:19:33 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:19:33.151Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/healthy-teeth [none]
+[debug] [2021-03-04T14:19:33.942Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/healthy-teeth 200
+[debug] [2021-03-04T14:19:33.943Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/healthy-teeth {"projectId":"healthy-teeth","projectNumber":"785936123967","displayName":"Healthy Teeth","name":"projects/healthy-teeth","resources":{"hostingSite":"healthy-teeth"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'healthy-teeth'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-03-04T14:19:33.951Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-04T14:19:33.951Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:19:34.164Z] <<< HTTP RESPONSE 200 {"date":"Thu, 04 Mar 2021 14:19:34 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:19:34.167Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-teeth/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-03-04T14:19:36.088Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:19:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[healthy-teeth]: beginning deploy... 
+[info] i  hosting[healthy-teeth]: found 23 files in build 
+[debug] [2021-03-04T14:19:36.585Z] > refreshing access token with scopes: []
+[debug] [2021-03-04T14:19:36.585Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:19:36.587Z] [hosting] hash cache [YnVpbGQ] stored for 23 files
+[debug] [2021-03-04T14:19:36.587Z] [hosting][hash queue][FINAL] {"max":451,"min":78,"avg":127.8695652173913,"active":0,"complete":23,"success":23,"errored":0,"retried":0,"total":23,"elapsed":463}
+[debug] [2021-03-04T14:19:36.801Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 04 Mar 2021 14:19:36 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:19:36.806Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-teeth/versions/455ea11509772ae5:populateFiles [none]
+[debug] [2021-03-04T14:19:36.806Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-teeth/versions/455ea11509772ae5:populateFiles {"files":{"/asset-manifest.json":"6c4859a6e0ca96b4b0a5a987147ace3b72fa70874dcbf3b2f71e89ace50d9db8","/index.html":"e03fa99a4f291a6435f1ffe03892018e4f8bfb285a438a47f07ee7ee2f541fb3","/manifest.json":"53976f0bcff8952af5b24a3d622069c0d7c238eb42f134824d9184f5b56c0c66","/static/css/main.c3230d54.chunk.css":"ee01075baccb835dc89a8675f632334626bf5da17854e8763a44311d8395c430","/static/css/main.c3230d54.chunk.css.map":"4f303b1e4c349f1519d382367a7810bab72565ae3ab3f2f8b90be75adcd7e50d","/favicon.ico":"e353a60432263b50b0e02e702c96edfafcfbad196213ede2d482dea0f4757be2","/static/js/2.98b36f88.chunk.js.LICENSE.txt":"f6d385cf76f57aadd70fdb2d5f36c5ac53e306f7c88d11dbb43a150a5562a94d","/static/js/runtime-main.23ea7b66.js":"65d72e3ea92821131bce6bb0800220e22896dfde0ce6d978ff537c72966d32d9","/static/js/runtime-main.23ea7b66.js.map":"6e6cc444badb25a788f97d2ca8b0b3e770c9ccce3a241d4473f2e93a83dff3b6","/static/media/emma.ed100122.png":"9b8dd5f2b08c4c6da6ee2e28eb7046d284ade4703501805ececca5637a9978fd","/static/media/lisa.7d40dbea.png":"e3547a19f6e2265eed241623132af2022205a09855395c4a07a76f8be56ce6b9","/static/js/main.88d0808f.chunk.js":"4ccaee4e8bcb1d6cb0e9efea589d53ed3073710b8a999b9d678f2355529276ff","/static/media/wilson.7f2a53ae.png":"3be6b2db1d86a690298dde14e3d2ac99ca74f83c6288386eb62ec2d846c5977e","/static/media/footer.f9bdf3e5.png":"e448ad0d26a31130018ae21f1f28d50f69774cdddff88cb6dd55afbb13853c74","/static/css/2.85261af7.chunk.css":"8b5e2fc8ae05bb06595f94a33ed7b818c2512527ec5ae7d1a6ee2963f6c99bba","/static/js/main.88d0808f.chunk.js.map":"6b9270decf1f079c2ab61b6bb00dfa02d1ebfbff009f2a508673c2d75da4c2b4","/static/css/2.85261af7.chunk.css.map":"b2e8781b30294361fa495d87ee443eaf2bf0254b15c1fd5124fbdef8b42f99ce","/static/media/makeAppointment.c80616e9.png":"4aca13a01a1e022f89f6371f188cfc80343324674ff404048325074931753338","/static/js/2.98b36f88.chunk.js":"2f2de54a65e4d993f2895bea949e4354c100731b53865e6403d4a1d6833055b1","/static/media/homeChair.f9bf62b3.png":"1cfd97ed4e0100ddbd0cec2733e1e550b57ef091f848fb6504c3af3e6c7bd5f1","/static/media/homeInfo.928305bb.png":"f8df7fba29cd9ef9cecde64219ed6e3a202f340feae88491b04898840e5790ef","/static/media/homeBackground.c5b67508.png":"c352190b517f8bd1bd6f4d18725d21a8a293abe4fc962bc994c4138d6b6bebd8","/static/js/2.98b36f88.chunk.js.map":"e250ad1d8739fb97e8abe6a67f70efc480ef91dbbe14e8480af3a248a6affcad"}}
+[debug] [2021-03-04T14:19:38.516Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-teeth/versions/455ea11509772ae5:populateFiles 200
+[debug] [2021-03-04T14:19:38.516Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/healthy-teeth/versions/455ea11509772ae5:populateFiles {"uploadRequiredHashes":["e03fa99a4f291a6435f1ffe03892018e4f8bfb285a438a47f07ee7ee2f541fb3","4ccaee4e8bcb1d6cb0e9efea589d53ed3073710b8a999b9d678f2355529276ff","6c4859a6e0ca96b4b0a5a987147ace3b72fa70874dcbf3b2f71e89ace50d9db8","6b9270decf1f079c2ab61b6bb00dfa02d1ebfbff009f2a508673c2d75da4c2b4"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files"}
+[debug] [2021-03-04T14:19:38.521Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/e03fa99a4f291a6435f1ffe03892018e4f8bfb285a438a47f07ee7ee2f541fb3 [none]
+[debug] [2021-03-04T14:19:38.521Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/e03fa99a4f291a6435f1ffe03892018e4f8bfb285a438a47f07ee7ee2f541fb3 [stream]
+[debug] [2021-03-04T14:19:38.524Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/4ccaee4e8bcb1d6cb0e9efea589d53ed3073710b8a999b9d678f2355529276ff [none]
+[debug] [2021-03-04T14:19:38.525Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/4ccaee4e8bcb1d6cb0e9efea589d53ed3073710b8a999b9d678f2355529276ff [stream]
+[debug] [2021-03-04T14:19:38.527Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6c4859a6e0ca96b4b0a5a987147ace3b72fa70874dcbf3b2f71e89ace50d9db8 [none]
+[debug] [2021-03-04T14:19:38.528Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6c4859a6e0ca96b4b0a5a987147ace3b72fa70874dcbf3b2f71e89ace50d9db8 [stream]
+[debug] [2021-03-04T14:19:38.530Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6b9270decf1f079c2ab61b6bb00dfa02d1ebfbff009f2a508673c2d75da4c2b4 [none]
+[debug] [2021-03-04T14:19:38.531Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6b9270decf1f079c2ab61b6bb00dfa02d1ebfbff009f2a508673c2d75da4c2b4 [stream]
+[debug] [2021-03-04T14:19:38.533Z] [hosting][populate queue][FINAL] {"max":1936,"min":1936,"avg":1936,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1948}
+[debug] [2021-03-04T14:19:38.534Z] [hosting] uploads queued: 4
+[debug] [2021-03-04T14:19:41.863Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/e03fa99a4f291a6435f1ffe03892018e4f8bfb285a438a47f07ee7ee2f541fb3 200
+[debug] [2021-03-04T14:19:41.863Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/e03fa99a4f291a6435f1ffe03892018e4f8bfb285a438a47f07ee7ee2f541fb3 [stream]
+[debug] [2021-03-04T14:19:41.883Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/4ccaee4e8bcb1d6cb0e9efea589d53ed3073710b8a999b9d678f2355529276ff 200
+[debug] [2021-03-04T14:19:41.883Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/4ccaee4e8bcb1d6cb0e9efea589d53ed3073710b8a999b9d678f2355529276ff [stream]
+[debug] [2021-03-04T14:19:41.887Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6c4859a6e0ca96b4b0a5a987147ace3b72fa70874dcbf3b2f71e89ace50d9db8 200
+[debug] [2021-03-04T14:19:41.887Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6c4859a6e0ca96b4b0a5a987147ace3b72fa70874dcbf3b2f71e89ace50d9db8 [stream]
+[debug] [2021-03-04T14:19:41.936Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6b9270decf1f079c2ab61b6bb00dfa02d1ebfbff009f2a508673c2d75da4c2b4 200
+[debug] [2021-03-04T14:19:41.937Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/healthy-teeth/versions/455ea11509772ae5/files/6b9270decf1f079c2ab61b6bb00dfa02d1ebfbff009f2a508673c2d75da4c2b4 [stream]
+[debug] [2021-03-04T14:19:41.937Z] [hosting][upload queue][FINAL] {"max":3417,"min":3346,"avg":3373.75,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":3420}
+[info] ✔  hosting[healthy-teeth]: file upload complete 
+[debug] [2021-03-04T14:19:41.939Z] [hosting] deploy completed after 5848ms
+[debug] [2021-03-04T14:19:41.941Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "healthy-teeth"
+    },
+    "site": "healthy-teeth",
+    "version": "sites/healthy-teeth/versions/455ea11509772ae5"
+  }
+]
+[info] i  hosting[healthy-teeth]: finalizing version... 
+[debug] [2021-03-04T14:19:41.944Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-04T14:19:41.944Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:19:42.146Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 04 Mar 2021 14:19:42 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:19:42.152Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/healthy-teeth/versions/455ea11509772ae5?updateMask=status  
+ {"status":"FINALIZED"}

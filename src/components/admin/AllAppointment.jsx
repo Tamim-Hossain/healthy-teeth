@@ -52,6 +52,11 @@ const AllAppointment = () => {
 						<h5 className="text-center text-secondary font-weight-bold">DATE</h5>
 						<hr />
 					</Col>
+					{patients.length === 0 && (
+						<p className="font-weight-bold display-4" style={{ margin: "auto" }}>
+							No data found.
+						</p>
+					)}
 					{patients.map((patient, idx) => (
 						<>
 							<Col className="text-center font-weight-bold" md={1}>

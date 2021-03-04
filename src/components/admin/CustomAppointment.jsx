@@ -53,6 +53,11 @@ const CustomAppointment = () => {
 							<h6 className="text-center text-secondary font-weight-bold">PHONE</h6>
 							<hr />
 						</Col>
+						{filterToday.length === 0 && (
+							<p className="font-weight-bold" style={{ margin: "auto", fontSize: "2.5rem" }}>
+								No data found.
+							</p>
+						)}
 						{filterToday.map((patient, idx) => (
 							<>
 								<Col className="text-center" md={4}>
