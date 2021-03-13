@@ -42,28 +42,32 @@ const Menu = () => {
 						<Nav.Link
 							as={Link}
 							to="/"
-							className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+							className={`font-weight-bold ${pathname === "/" ? "" : "text-info"}`}
+							style={{ color: `${pathname === "/" ? "#f7582d" : ""}` }}
 						>
 							Home
 						</Nav.Link>
 						<Nav.Link
 							as={Link}
 							to="/appointment"
-							className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+							className={`font-weight-bold ${pathname === "/" ? "" : "text-info"}`}
+							style={{ color: `${pathname === "/" ? "#f7582d" : ""}` }}
 						>
 							Appointment
 						</Nav.Link>
 						<Nav.Link
 							as={Link}
 							to="/dashboard/all"
-							className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+							className={`font-weight-bold ${pathname === "/" ? "" : "text-info"}`}
+							style={{ color: `${pathname === "/" ? "#f7582d" : ""}` }}
 						>
 							Dashboard
 						</Nav.Link>
 						{isLoggedIn && (
 							<Nav.Link
 								onClick={handleLogOut}
-								className={`font-weight-bold ${pathname === "/" ? "text-danger" : "text-info"}`}
+								className={`font-weight-bold ${pathname === "/" ? "" : "text-info"}`}
+								style={{ color: `${pathname === "/" ? "#f7582d" : ""}` }}
 							>
 								Log Out
 							</Nav.Link>

@@ -49,9 +49,7 @@ const Footer = () => {
 						<p className="text-secondary">Phone: +000 123 456789</p>
 					</Col>
 				</Row>
-				<p className="text-center mt-5 text-secondary">
-					&#169;{new Date().getFullYear()}, All Rights Reserved.
-				</p>
+				<p className="text-center mt-5 text-secondary">&#169;{new Date().getFullYear()}, All Rights Reserved.</p>
 			</Container>
 		</footer>
 	);
