@@ -5,7 +5,6 @@
 - Dental service solution-based web application. MERN-stack project.
 - Authenticated users can make an appointment for their dental treatment.
 - Admin can add a new appointment, add a new admin and see all the patients.
-- Built with ReactJS, Firebase, Heroku, Bootstrap, NodeJS, ExpressJS, MongoDB.
 
 ### **Technology used:**
 
