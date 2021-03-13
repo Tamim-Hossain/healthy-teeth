@@ -11,8 +11,8 @@ const Main = () => {
 						Your New Smile <br /> Starts Here
 					</h1>
 					<p className="text-secondary">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-						has been the industry’s standard dummy text ever since the
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+						industry’s standard dummy text ever since the
 					</p>
 					<Button variant="info" className="font-weight-bold" as={Link} to="/appointment">
 						GET APPOINTMENT

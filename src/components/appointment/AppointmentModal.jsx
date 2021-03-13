@@ -33,6 +33,7 @@ const AppointmentModal = ({ closeModal, isModalOpen, title, date, time }) => {
 			closeModal();
 		}
 	};
+
 	return (
 		<Modal isOpen={isModalOpen} onRequestClose={closeModal} style={modalStyles}>
 			<Form onSubmit={handleSubmit(onSubmit)} className="p-5">

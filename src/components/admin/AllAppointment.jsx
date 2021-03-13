@@ -15,6 +15,7 @@ const AllAppointment = () => {
 				setPatients(data);
 			});
 	}, [patients]);
+
 	return (
 		<>
 			<Helmet>

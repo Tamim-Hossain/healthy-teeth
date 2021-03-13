@@ -26,6 +26,7 @@ const AvailableAppointment = ({ date }) => {
 				setLoading(false);
 			});
 	}, [appointments]);
+
 	return (
 		<Container className="mt-5 pt-5 mb-5">
 			<h2 className="font-weight-bold text-info text-center">AvailAble Appointments on {date}</h2>

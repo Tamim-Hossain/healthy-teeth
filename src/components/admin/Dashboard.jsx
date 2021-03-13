@@ -16,39 +16,19 @@ const Dashboard = () => {
 			<Row>
 				<Menu />
 				<Col md={3} className="mt-3 pt-5">
-					<NavLink
-						activeClassName="bg-light font-weight-bold"
-						className="dropdown-item"
-						to="/dashboard/all"
-					>
+					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/all">
 						All Appointments
 					</NavLink>
-					<NavLink
-						activeClassName="bg-light font-weight-bold"
-						className="dropdown-item"
-						to="/dashboard/today"
-					>
+					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/today">
 						Today's Appointments
 					</NavLink>
-					<NavLink
-						activeClassName="bg-light font-weight-bold"
-						className="dropdown-item"
-						to="/dashboard/search"
-					>
+					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/search">
 						Appointments by Date
 					</NavLink>
-					<NavLink
-						activeClassName="bg-light font-weight-bold"
-						className="dropdown-item"
-						to="/dashboard/add"
-					>
+					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/add">
 						Add Available Service
 					</NavLink>
-					<NavLink
-						activeClassName="bg-light font-weight-bold"
-						className="dropdown-item"
-						to="/dashboard/admin"
-					>
+					<NavLink activeClassName="bg-light font-weight-bold" className="dropdown-item" to="/dashboard/admin">
 						Add New Admin
 					</NavLink>
 				</Col>

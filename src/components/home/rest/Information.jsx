@@ -14,11 +14,10 @@ const Information = () => {
 						Exceptional Dental <br /> Care, On Your Terms.
 					</h1>
 					<p className="text-secondary mt-5">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic et aliquam, saepe maxime
-						vel omnis ab corrupti sit accusamus error. Unde natus dolore atque delectus porro
-						eveniet, placeat quia, expedita molestiae ipsam non facere minima odio iusto modi earum?
-						Voluptate aliquid eaque natus dolores aut quia molestias dolorem. Omnis debitis nobis
-						fugiat suscipit rerum aliquam error dolores nam blanditiis labore, dicta maiores ea
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic et aliquam, saepe maxime vel omnis ab corrupti
+						sit accusamus error. Unde natus dolore atque delectus porro eveniet, placeat quia, expedita molestiae ipsam
+						non facere minima odio iusto modi earum? Voluptate aliquid eaque natus dolores aut quia molestias dolorem.
+						Omnis debitis nobis fugiat suscipit rerum aliquam error dolores nam blanditiis labore, dicta maiores ea
 						ipsum, corrupti est non earum. Iure, delectus!
 					</p>
 					<Button variant="info" className="font-weight-bold mt-4" as={Link} to="/appointment">

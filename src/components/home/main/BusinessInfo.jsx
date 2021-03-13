@@ -24,6 +24,7 @@ const BusinessInfo = () => {
 			backgroundColor: "primary",
 		},
 	];
+
 	return (
 		<Row className="mt-5 pt-5 text-white w-75" style={{ margin: "0 auto" }}>
 			{infoData.map((info) => (
